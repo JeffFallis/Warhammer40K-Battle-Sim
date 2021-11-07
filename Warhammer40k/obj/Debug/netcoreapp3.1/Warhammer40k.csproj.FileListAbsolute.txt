@@ -1,0 +1,13 @@
+C:\Users\Jeff\Documents\Visual Basic Projects\Warhammer40k\Warhammer40k\obj\Debug\netcoreapp3.1\Warhammer40k.csprojAssemblyReference.cache
+C:\Users\Jeff\Documents\Visual Basic Projects\Warhammer40k\Warhammer40k\obj\Debug\netcoreapp3.1\Warhammer40k.AssemblyInfoInputs.cache
+C:\Users\Jeff\Documents\Visual Basic Projects\Warhammer40k\Warhammer40k\obj\Debug\netcoreapp3.1\Warhammer40k.AssemblyInfo.cs
+C:\Users\Jeff\Documents\Visual Basic Projects\Warhammer40k\Warhammer40k\obj\Debug\netcoreapp3.1\Warhammer40k.csproj.CoreCompileInputs.cache
+C:\Users\Jeff\Documents\Visual Basic Projects\Warhammer40k\Warhammer40k\bin\Debug\netcoreapp3.1\Warhammer40k.exe
+C:\Users\Jeff\Documents\Visual Basic Projects\Warhammer40k\Warhammer40k\bin\Debug\netcoreapp3.1\Warhammer40k.deps.json
+C:\Users\Jeff\Documents\Visual Basic Projects\Warhammer40k\Warhammer40k\bin\Debug\netcoreapp3.1\Warhammer40k.runtimeconfig.json
+C:\Users\Jeff\Documents\Visual Basic Projects\Warhammer40k\Warhammer40k\bin\Debug\netcoreapp3.1\Warhammer40k.runtimeconfig.dev.json
+C:\Users\Jeff\Documents\Visual Basic Projects\Warhammer40k\Warhammer40k\bin\Debug\netcoreapp3.1\Warhammer40k.dll
+C:\Users\Jeff\Documents\Visual Basic Projects\Warhammer40k\Warhammer40k\bin\Debug\netcoreapp3.1\Warhammer40k.pdb
+C:\Users\Jeff\Documents\Visual Basic Projects\Warhammer40k\Warhammer40k\obj\Debug\netcoreapp3.1\Warhammer40k.dll
+C:\Users\Jeff\Documents\Visual Basic Projects\Warhammer40k\Warhammer40k\obj\Debug\netcoreapp3.1\Warhammer40k.pdb
+C:\Users\Jeff\Documents\Visual Basic Projects\Warhammer40k\Warhammer40k\obj\Debug\netcoreapp3.1\Warhammer40k.genruntimeconfig.cache
