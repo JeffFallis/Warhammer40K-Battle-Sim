@@ -8,21 +8,26 @@ namespace Warhammer40k.Units.Necrons
     {
         public NecronWarriorsUnit(int numberOfUnits)
         {
+            SetBasicInfo();
+            SetStartingStrength(numberOfUnits);
+            SetPowerRatingAndPoints();
+            SetModelsList<NecronWarriorsModel>();
+        }
+
+        private void SetBasicInfo()
+        {
             ID = IDCounter++;
             Name = "Necron Warriors";
             Faction = Factions.Necrons;
             BattlefieldRole = BattlefieldRoles.Troops;
             MinUnitNum = 10;
             MaxUnitNum = 20;
-            SetStartingStrength(numberOfUnits);
-            SetPowerRating();
-            SetModelsList<NecronWarriorsModel>();
-            Points = 13 * StartingStrength;
         }
 
-        public override void SetPowerRating()
+        public override void SetPowerRatingAndPoints()
         {
             PowerRating = StartingStrength >= 11 ? 12 : 6;
+            Points = 13 * StartingStrength;
         }
     }
 

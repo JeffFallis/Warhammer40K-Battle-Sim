@@ -38,6 +38,7 @@ namespace Warhammer40k
         public void SetModelsList<T>() where T : ModelBase, new()
         {
             Models = new List<ModelBase>();
+
             for (int i = 0; i < StartingStrength; i++)
                 Models.Add(new T());
         }
@@ -50,6 +51,6 @@ namespace Warhammer40k
             Models = null;
         }
 
-        public abstract void SetPowerRating();
+        public abstract void SetPowerRatingAndPoints();
     }
 }
