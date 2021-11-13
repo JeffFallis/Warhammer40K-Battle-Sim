@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Warhammer40k.Units
 {
-    enum BattlefieldRoles
+    public enum BattlefieldRoles
     {
         HQ,
         Troops,

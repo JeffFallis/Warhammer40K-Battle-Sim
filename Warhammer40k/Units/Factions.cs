@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Warhammer40k.Units
 {
-    enum Factions
+    public enum Factions
     {
         SpaceMarine,
         Necrons,

@@ -2,11 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 using Warhammer40k.Units;
+using Warhammer40k.Units.Necrons;
 using Warhammer40k.Wargear;
 
 namespace Warhammer40k
 {
-    abstract class UnitBase
+    public abstract class UnitBase
     {
         public static int IDCounter = 1;
         public int ID { get; set; }
@@ -19,6 +20,7 @@ namespace Warhammer40k
         public int MaxUnitNum { get; set; }
         public int StartingStrength { get; set; }
         public bool UnderStrengthUnit { get; set; }
+        public List<ModelBase> ValidModels { get; set; }
         public List<ModelBase> Models { get; set; }
         public Dictionary<string, WargearBase> Wargear { get; set; }
         public Dictionary<string, object> Abilities { get; set; }
@@ -38,12 +40,13 @@ namespace Warhammer40k
             StartingStrength = numberOfUnits;
         }
 
-        public void SetModelsList<T>() where T : ModelBase, new()
+        public void SetModelsList()
         {
             Models = new List<ModelBase>();
+            Type modelBaseType = ValidModels[0].GetType();
 
             for (int i = 0; i < StartingStrength; i++)
-                Models.Add(new T());
+                Models.Add(Activator.CreateInstance(modelBaseType) as ModelBase);
         }
 
         public void AssignCustomWargear(List<WargearBase> oldWargear, List<WargearBase> newWargear, int numOfUnits)
@@ -66,7 +69,6 @@ namespace Warhammer40k
                     Console.Out.WriteLine($"{Name} can not use the {item.Name}");
                     return false;
                 }
-                    
 
             return true;
         }
@@ -90,6 +92,10 @@ namespace Warhammer40k
 
             Models = null;
         }
+
+        public abstract void SetBasicInfo();
+
+        public abstract void SetValidModels();
 
         public abstract void SetPowerRatingAndPoints();
     }
