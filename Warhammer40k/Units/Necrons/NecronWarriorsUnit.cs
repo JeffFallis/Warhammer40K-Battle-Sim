@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using Warhammer40k.Wargear;
 
 namespace Warhammer40k.Units.Necrons
 {
@@ -12,6 +13,13 @@ namespace Warhammer40k.Units.Necrons
             SetStartingStrength(numberOfUnits);
             SetPowerRatingAndPoints();
             SetModelsList<NecronWarriorsModel>();
+
+            // TODO Refactor into factory class when that is made
+            List<WargearBase> validWargear = new List<WargearBase>();
+            validWargear.Add(new GaussFlayer());
+            validWargear.Add(new GaussReaper());
+            validWargear.Add(new CloseCombatWeapon());
+            SetValidWargear(validWargear);
         }
 
         private void SetBasicInfo()
@@ -33,7 +41,13 @@ namespace Warhammer40k.Units.Necrons
 
     class NecronWarriorsModel : ModelBase
     {
-        public NecronWarriorsModel()
+        public NecronWarriorsModel() : base()
+        {
+            SetBasicInfo();
+            SetDefaultWargear();
+        }
+
+        public void SetBasicInfo()
         {
             ID = IDCounter++;
             Name = "Necron Warriors";
@@ -47,6 +61,13 @@ namespace Warhammer40k.Units.Necrons
             Attacks = 1;
             Leadership = 10;
             Save = 3;
+        }
+
+        public override void SetDefaultWargear()
+        {
+            Wargear = new Dictionary<string, WargearBase>();
+            Wargear.Add("Guass Flayer", new GaussFlayer());
+            Wargear.Add("Close Combat Weapon", new CloseCombatWeapon());
         }
     }
 }
