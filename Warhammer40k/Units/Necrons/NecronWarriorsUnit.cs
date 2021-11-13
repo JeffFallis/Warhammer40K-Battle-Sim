@@ -7,12 +7,9 @@ namespace Warhammer40k.Units.Necrons
 {
     class NecronWarriorsUnit : UnitBase
     {
-        public NecronWarriorsUnit(int numberOfUnits)
+        public NecronWarriorsUnit()
         {
-            SetBasicInfo();
-            SetStartingStrength(numberOfUnits);
-            SetPowerRatingAndPoints();
-            SetModelsList<NecronWarriorsModel>();
+            ValidModels = new List<ModelBase>();
 
             // TODO Refactor into factory class when that is made
             List<WargearBase> validWargear = new List<WargearBase>();
@@ -22,7 +19,7 @@ namespace Warhammer40k.Units.Necrons
             SetValidWargear(validWargear);
         }
 
-        private void SetBasicInfo()
+        public override void SetBasicInfo()
         {
             ID = IDCounter++;
             Name = "Necron Warriors";
@@ -30,6 +27,11 @@ namespace Warhammer40k.Units.Necrons
             BattlefieldRole = BattlefieldRoles.Troops;
             MinUnitNum = 10;
             MaxUnitNum = 20;
+        }
+
+        public override void SetValidModels()
+        {
+            ValidModels.Add(new NecronWarriorsModel());
         }
 
         public override void SetPowerRatingAndPoints()

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Warhammer40k.Wargear
 {
-    abstract class WargearBase
+    public abstract class WargearBase
     {
         public string Name { get; set; }
         public string Strength { get; set; }

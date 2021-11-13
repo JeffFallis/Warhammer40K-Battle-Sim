@@ -5,7 +5,7 @@ using Warhammer40k.Wargear;
 
 namespace Warhammer40k.Units
 {
-    abstract class ModelBase
+    public abstract class ModelBase
     {
         public static int IDCounter = 1;
         public int ID { get; set; }
